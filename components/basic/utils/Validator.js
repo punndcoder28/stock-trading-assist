@@ -1,4 +1,4 @@
-export default class Validator {
+class Validator {
   constructor() {}
 
   validatePhone(phone) {
@@ -32,3 +32,5 @@ export default class Validator {
     return validation;
   }
 }
+
+export default validator = new Validator();
