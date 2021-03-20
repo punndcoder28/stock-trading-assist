@@ -6,6 +6,7 @@ import Header from '../../components/basic/Header';
 import Button from '../../components/basic/Button';
 import TextInput from '../../components/basic/TextInput';
 import Validator from '../../components/basic/utils/Validator';
+import {colors} from '../../components/basic/theme';
 
 export default function LoginScreen({navigation}) {
   const [phone, setPhone] = useState({value: '', error: ''});
@@ -26,8 +27,13 @@ export default function LoginScreen({navigation}) {
   };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Logo />
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.white,
+      }}>
       <Header>Welcome back.</Header>
       <TextInput
         label="Phone"
@@ -50,7 +56,7 @@ export default function LoginScreen({navigation}) {
         errorText={password.error}
         secureTextEntry
       />
-      <Button mode="contained" onPress={onLoginPressed}>
+      <Button mode="contained" onPress={() => {}}>
         Login
       </Button>
       <View style={styles.row}>
