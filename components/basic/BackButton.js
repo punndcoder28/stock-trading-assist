@@ -1,13 +1,11 @@
 import React from 'react';
-import {TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {TouchableOpacity, Image, StyleSheet, Platform} from 'react-native';
+import {images} from '../../constanst';
 
 export default function BackButton({goBack}) {
   return (
     <TouchableOpacity onPress={goBack} style={styles.container}>
-      <Image
-        style={styles.image}
-        source={require('../assets/arrow_back.png')}
-      />
+      <Image style={styles.image} source={images.icons.backArrow} />
     </TouchableOpacity>
   );
 }
@@ -15,7 +13,7 @@ export default function BackButton({goBack}) {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    top: 10,
+    top: Platform.OS === 'ios' ? 40 : 0,
     left: 4,
   },
   image: {

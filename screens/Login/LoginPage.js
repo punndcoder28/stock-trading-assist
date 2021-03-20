@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import {TouchableOpacity, StyleSheet, View} from 'react-native';
 import {Text} from 'react-native-paper';
-import Background from '../components/Background';
 import Logo from '../../components/basic/Logo';
 import Header from '../../components/basic/Header';
 import Button from '../../components/basic/Button';
 import TextInput from '../../components/basic/TextInput';
-import BackButton from '../../components/basic/BackButton';
 import Validator from '../../components/basic/utils/Validator';
 
 export default function LoginScreen({navigation}) {
@@ -28,21 +26,20 @@ export default function LoginScreen({navigation}) {
   };
 
   return (
-    <Background>
-      <BackButton goBack={navigation.goBack} />
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Logo />
       <Header>Welcome back.</Header>
       <TextInput
-        label="Email"
+        label="Phone"
         returnKeyType="next"
-        value={email.value}
+        value={phone.value}
         onChangeText={text => setPhone({value: text, error: ''})}
-        error={!!email.error}
-        errorText={email.error}
+        error={!!phone.error}
+        errorText={phone.error}
         autoCapitalize="none"
-        autoCompleteType="email"
-        textContentType="emailAddress"
-        keyboardType="email-address"
+        autoCompleteType="phone"
+        textContentType="phone"
+        keyboardType="phone-pad"
       />
       <TextInput
         label="Password"
@@ -53,22 +50,16 @@ export default function LoginScreen({navigation}) {
         errorText={password.error}
         secureTextEntry
       />
-      <View style={styles.forgotPassword}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('ResetPasswordScreen')}>
-          <Text style={styles.forgot}>Forgot your password?</Text>
-        </TouchableOpacity>
-      </View>
       <Button mode="contained" onPress={onLoginPressed}>
         Login
       </Button>
       <View style={styles.row}>
         <Text>Don’t have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.replace('RegisterScreen')}>
+        <TouchableOpacity onPress={() => {}}>
           <Text style={styles.link}>Sign up</Text>
         </TouchableOpacity>
       </View>
-    </Background>
+    </View>
   );
 }
 
