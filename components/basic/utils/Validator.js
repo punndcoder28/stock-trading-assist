@@ -31,6 +31,18 @@ class Validator {
     }
     return validation;
   }
+
+  validateName(name) {
+    let validation = {
+      isValid: true,
+      errorMessage: '',
+    };
+    if (password.length < 1) {
+      validation.isValid = false;
+      validation.errorMessage = 'Please enter a password';
+    }
+    return validation;
+  }
 }
 
 export default validator = new Validator();

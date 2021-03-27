@@ -41,5 +41,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: 'red',
     paddingTop: 8,
+    alignSelf: 'center',
   },
 });

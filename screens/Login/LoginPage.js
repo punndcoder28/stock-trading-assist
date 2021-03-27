@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {TouchableOpacity, StyleSheet, View} from 'react-native';
 import {Text} from 'react-native-paper';
-import Logo from '../../components/basic/Logo';
 import Header from '../../components/basic/Header';
 import Button from '../../components/basic/Button';
 import TextInput from '../../components/basic/TextInput';
@@ -13,17 +12,14 @@ export default function LoginScreen({navigation}) {
   const [password, setPassword] = useState({value: '', error: ''});
 
   const onLoginPressed = () => {
-    const emailError = Validator.validatePhone(phone.value);
+    const phoneError = Validator.validatePhone(phone.value);
     const passwordError = Validator.validatePassword(password.value);
-    if (emailError || passwordError) {
-      setPhone({...phone, error: emailError});
-      setPassword({...password, error: passwordError});
+    if (!phoneError.isValid || !passwordError.isValid) {
+      setPhone({value: phone.value, error: phoneError.errorMessage});
+      setPassword({value: password.value, error: passwordError.errorMessage});
       return;
     }
-    navigation.reset({
-      index: 0,
-      routes: [{name: 'Dashboard'}],
-    });
+    navigation.navigate('HomeStack');
   };
 
   return (
@@ -43,8 +39,6 @@ export default function LoginScreen({navigation}) {
         error={!!phone.error}
         errorText={phone.error}
         autoCapitalize="none"
-        autoCompleteType="phone"
-        textContentType="phone"
         keyboardType="phone-pad"
       />
       <TextInput
@@ -56,12 +50,12 @@ export default function LoginScreen({navigation}) {
         errorText={password.error}
         secureTextEntry
       />
-      <Button mode="contained" onPress={() => {}}>
+      <Button mode="contained" onPress={() => onLoginPressed()}>
         Login
       </Button>
       <View style={styles.row}>
         <Text>Don’t have an account? </Text>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => navigation.navigate('SignUpPage')}>
           <Text style={styles.link}>Sign up</Text>
         </TouchableOpacity>
       </View>
