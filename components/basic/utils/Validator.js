@@ -17,6 +17,18 @@ class Validator {
     return validation;
   }
 
+  validateName(name) {
+    let validation = {
+      isValid: true,
+      errorMessage: '',
+    };
+    if (name.length < 1) {
+      validation.isValid = false;
+      validation.errorMessage = 'Please enter your name';
+    }
+    return validation;
+  }
+
   validatePassword(password) {
     let validation = {
       isValid: true,

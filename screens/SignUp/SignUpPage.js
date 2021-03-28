@@ -16,9 +16,11 @@ export default function LoginScreen({navigation}) {
   const onSignUpPressed = () => {
     const phoneError = Validator.validatePhone(phone.value);
     const passwordError = Validator.validatePassword(password.value);
-    if (!phoneError.isValid || !passwordError.isValid) {
+    const nameError = Validator.validateName(name.value);
+    if (!phoneError.isValid || !passwordError.isValid || !nameError.isValid) {
       setPhone({value: phone.value, error: phoneError.errorMessage});
       setPassword({value: password.value, error: passwordError.errorMessage});
+      setName({value: name.value, error: nameError.errorMessage});
       return;
     }
     let success = data => {
@@ -32,6 +34,7 @@ export default function LoginScreen({navigation}) {
     let requestBody = {
       phone: phone.value,
       password: password.value,
+      name: name.value,
     };
     userServiceController.registerUser(requestBody, success, failure);
   };
