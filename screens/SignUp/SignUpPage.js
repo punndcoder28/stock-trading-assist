@@ -6,6 +6,8 @@ import TextInput from '../../components/basic/TextInput';
 import Validator from '../../components/basic/utils/Validator';
 import {colors} from '../../components/basic/theme';
 
+import userServiceController from '../../controllers/userServiceController';
+
 export default function LoginScreen({navigation}) {
   const [phone, setPhone] = useState({value: '', error: ''});
   const [password, setPassword] = useState({value: '', error: ''});
@@ -14,14 +16,24 @@ export default function LoginScreen({navigation}) {
   const onSignUpPressed = () => {
     const phoneError = Validator.validatePhone(phone.value);
     const passwordError = Validator.validatePassword(password.value);
-    const nameError = Validator.validatePhone(name.value);
-    if (!phoneError.isValid || !passwordError.isValid || !nameError.isValid) {
+    if (!phoneError.isValid || !passwordError.isValid) {
       setPhone({value: phone.value, error: phoneError.errorMessage});
       setPassword({value: password.value, error: passwordError.errorMessage});
-      setName({value: name.value, error: nameError.errorMessage});
       return;
     }
-    navigation.navigate('HomeStack');
+    let success = data => {
+      console.log(data);
+      navigation.navigate('HomeStack');
+    };
+    let failure = data => {
+      console.log('GETTING ERROR');
+      console.log(data);
+    };
+    let requestBody = {
+      phone: phone.value,
+      password: password.value,
+    };
+    userServiceController.registerUser(requestBody, success, failure);
   };
 
   return (
