@@ -15,6 +15,11 @@ class UserServiceController {
     let url = `${this.baseUrl}login`;
     BaseController.sendRequest(url, 'post', requestBody, success, failure);
   }
+
+  postAnswer(requestBody, success, failure) {
+    let url = `${this.baseUrl}questionnaire`;
+    BaseController.sendRequest(url, 'post', requestBody, success, failure);
+  }
 }
 
 let userServiceController = new UserServiceController();

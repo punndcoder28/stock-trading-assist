@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Button from '../../components/basic/Button';
+import userServiceController from '../../controllers/userServiceController';
 
 export default class QuestionnairePage extends React.Component {
   constructor(props) {
@@ -15,10 +16,21 @@ export default class QuestionnairePage extends React.Component {
       // submit to backend
       let answers = this.state.answers;
       answers.push(answer);
-      this.setState({
-        answers: answers,
-      });
-      console.log(this.state);
+      let success = data => {
+        console.log(data);
+      };
+      let failure = data => {
+        console.log('GETTING ERROR');
+        console.log(data);
+      };
+      let requestBody = {
+        userId: '5797ffa0-7919-4940-a5a0-55a132b18650',
+        answer1: answers[0],
+        answer2: answers[1],
+        answer3: answers[2],
+        answer4: answer,
+      };
+      userServiceController.postAnswer(requestBody, success, failure);
     } else {
       let answers = this.state.answers;
       answers.push(answer);
