@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {TouchableOpacity, StyleSheet, View} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Text} from 'react-native-paper';
 import Header from '../../components/basic/Header';
 import Button from '../../components/basic/Button';
@@ -22,7 +23,22 @@ export default function LoginScreen({navigation}) {
     // }
     let success = data => {
       console.log(data);
-      navigation.navigate('HomeStack');
+      let user = {};
+      user.authToken = data.token;
+      user.data = data.data.Item;
+      user = JSON.stringify(user);
+      AsyncStorage.setItem('userData', user);
+      AsyncStorage.getItem('questionnaireAnswered', (err, value) => {
+        if (err) {
+          console.log('error');
+          return;
+        }
+        if (value && value === 'true') {
+          navigation.navigate('HomePage');
+        } else {
+          navigation.navigate('QuestionnairePage');
+        }
+      });
     };
     let failure = data => {
       console.log('GETTING ERROR');

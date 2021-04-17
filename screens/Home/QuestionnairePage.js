@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import Button from '../../components/basic/Button';
@@ -13,11 +14,13 @@ export default class QuestionnairePage extends React.Component {
   }
   submitAnswer(answer) {
     if (this.state.question === 3) {
-      // submit to backend
       let answers = this.state.answers;
       answers.push(answer);
+      let self = this;
       let success = data => {
         console.log(data);
+        AsyncStorage.setItem('questionnaireAnswered', 'true');
+        self.props.navigation.navigate('HomePage');
       };
       let failure = data => {
         console.log('GETTING ERROR');
