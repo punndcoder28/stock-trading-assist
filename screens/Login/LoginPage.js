@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
-import {TouchableOpacity, StyleSheet, View} from 'react-native';
+import React, { useState } from 'react';
+import { TouchableOpacity, StyleSheet, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Text} from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import Header from '../../components/basic/Header';
 import Button from '../../components/basic/Button';
 import TextInput from '../../components/basic/TextInput';
 import Validator from '../../components/basic/utils/Validator';
-import {colors} from '../../components/basic/theme';
+import { colors } from '../../components/basic/theme';
 import userServiceController from '../../controllers/userServiceController';
 
-export default function LoginScreen({navigation}) {
-  const [phone, setPhone] = useState({value: '', error: ''});
-  const [password, setPassword] = useState({value: '', error: ''});
+export default function LoginScreen({ navigation }) {
+  const [phone, setPhone] = useState({ value: '', error: '' });
+  const [password, setPassword] = useState({ value: '', error: '' });
 
   const onLoginPressed = () => {
     const phoneError = Validator.validatePhone(phone.value);
@@ -22,8 +22,9 @@ export default function LoginScreen({navigation}) {
     //   return;
     // }
     let success = data => {
-      console.log(data);
       let user = {};
+      delete data.data.Item.passwordHash;
+      console.log(data);
       user.authToken = data.token;
       user.data = data.data.Item;
       user = JSON.stringify(user);
@@ -65,7 +66,7 @@ export default function LoginScreen({navigation}) {
         label="Phone"
         returnKeyType="next"
         value={phone.value}
-        onChangeText={text => setPhone({value: text, error: ''})}
+        onChangeText={text => setPhone({ value: text, error: '' })}
         error={!!phone.error}
         errorText={phone.error}
         autoCapitalize="none"
@@ -75,7 +76,7 @@ export default function LoginScreen({navigation}) {
         label="Password"
         returnKeyType="done"
         value={password.value}
-        onChangeText={text => setPassword({value: text, error: ''})}
+        onChangeText={text => setPassword({ value: text, error: '' })}
         error={!!password.error}
         errorText={password.error}
         secureTextEntry

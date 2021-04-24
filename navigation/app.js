@@ -26,7 +26,7 @@ export default class App extends React.Component {
           backgroundColor: colors.white, // or 'white
           borderBottomColor: "transparent"
         },
-        headerBackImage: null,
+        headerBackImage: () => null,
         headerBackTitle: null,
         headerLayoutPreset: "center",
         headerLeftContainerStyle: {
