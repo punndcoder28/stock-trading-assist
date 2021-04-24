@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		339406D088E0451FA1801110 /* libPods-StockTradingAssist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0680E151AB106E3F6BC1AE10 /* libPods-StockTradingAssist.a */; };
+		7EAB9162AC2C712D649F132F /* libPods-StockTradingAssist-StockTradingAssistTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B381CBC8180CD3DBCA6B01 /* libPods-StockTradingAssist-StockTradingAssistTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		97B6C29E8CA01310ED5DB7EA /* libPods-StockTradingAssist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7617240CC6087D023461D231 /* libPods-StockTradingAssist.a */; };
-		D9210D0C386DA8662B47B1BC /* libPods-StockTradingAssist-StockTradingAssistTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2E21593D554729E4DE7A7A /* libPods-StockTradingAssist-StockTradingAssistTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* StockTradingAssistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockTradingAssistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* StockTradingAssistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockTradingAssistTests.m; sourceTree = "<group>"; };
-		0550AF55DB9459D0159EB903 /* Pods-StockTradingAssist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist.debug.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist.debug.xcconfig"; sourceTree = "<group>"; };
+		0680E151AB106E3F6BC1AE10 /* libPods-StockTradingAssist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockTradingAssist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09974051AD44C83C377B0113 /* Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* StockTradingAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTradingAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = StockTradingAssist/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = StockTradingAssist/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = StockTradingAssist/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = StockTradingAssist/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = StockTradingAssist/main.m; sourceTree = "<group>"; };
-		1FCEAB7846091B3593F0826D /* Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig"; sourceTree = "<group>"; };
-		26D68AF7196162EB226F1C6E /* Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig"; sourceTree = "<group>"; };
-		7617240CC6087D023461D231 /* libPods-StockTradingAssist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockTradingAssist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B381CBC8180CD3DBCA6B01 /* libPods-StockTradingAssist-StockTradingAssistTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockTradingAssist-StockTradingAssistTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3033326B0C83BDC5F31CA6DF /* Pods-StockTradingAssist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist.debug.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist.debug.xcconfig"; sourceTree = "<group>"; };
+		5DDDC444664A80793B32C46F /* Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = StockTradingAssist/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CB2E21593D554729E4DE7A7A /* libPods-StockTradingAssist-StockTradingAssistTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockTradingAssist-StockTradingAssistTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4685B9A4EEF28BCC47234F4 /* Pods-StockTradingAssist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist.release.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FB34B84082DFC8498BFE0EC8 /* Pods-StockTradingAssist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTradingAssist.release.xcconfig"; path = "Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9210D0C386DA8662B47B1BC /* libPods-StockTradingAssist-StockTradingAssistTests.a in Frameworks */,
+				7EAB9162AC2C712D649F132F /* libPods-StockTradingAssist-StockTradingAssistTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97B6C29E8CA01310ED5DB7EA /* libPods-StockTradingAssist.a in Frameworks */,
+				339406D088E0451FA1801110 /* libPods-StockTradingAssist.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +99,11 @@
 		27C1F39A4B7AFC55379D8CA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0550AF55DB9459D0159EB903 /* Pods-StockTradingAssist.debug.xcconfig */,
-				D4685B9A4EEF28BCC47234F4 /* Pods-StockTradingAssist.release.xcconfig */,
-				1FCEAB7846091B3593F0826D /* Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig */,
-				26D68AF7196162EB226F1C6E /* Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig */,
+				3033326B0C83BDC5F31CA6DF /* Pods-StockTradingAssist.debug.xcconfig */,
+				FB34B84082DFC8498BFE0EC8 /* Pods-StockTradingAssist.release.xcconfig */,
+				09974051AD44C83C377B0113 /* Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig */,
+				5DDDC444664A80793B32C46F /* Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				7617240CC6087D023461D231 /* libPods-StockTradingAssist.a */,
-				CB2E21593D554729E4DE7A7A /* libPods-StockTradingAssist-StockTradingAssistTests.a */,
+				0680E151AB106E3F6BC1AE10 /* libPods-StockTradingAssist.a */,
+				28B381CBC8180CD3DBCA6B01 /* libPods-StockTradingAssist-StockTradingAssistTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "StockTradingAssistTests" */;
 			buildPhases = (
-				848F95A62E085EBF279B9FC7 /* [CP] Check Pods Manifest.lock */,
+				30A49DB3A8C2BDBEF9E7E75B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				60195B2BADBCD02DE44BC663 /* [CP] Embed Pods Frameworks */,
-				D5BD26300D753C6EA10D7F00 /* [CP] Copy Pods Resources */,
+				6E451A8D41FD535BF5A60629 /* [CP] Embed Pods Frameworks */,
+				C8FE96F3452822E838FE04F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "StockTradingAssist" */;
 			buildPhases = (
-				69548021B3AC413B7BC6EC5D /* [CP] Check Pods Manifest.lock */,
+				88B2A471AFD784E472ED70B1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				B7F09331101DDDCD26B61B66 /* [CP] Embed Pods Frameworks */,
-				DB002590E2D3F0E211249BFF /* [CP] Copy Pods Resources */,
+				9D65921B7F74802FAC910C0C /* [CP] Embed Pods Frameworks */,
+				589E90682062CD613A1C9538 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,7 +200,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -265,46 +264,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		60195B2BADBCD02DE44BC663 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		69548021B3AC413B7BC6EC5D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StockTradingAssist-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		848F95A62E085EBF279B9FC7 /* [CP] Check Pods Manifest.lock */ = {
+		30A49DB3A8C2BDBEF9E7E75B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,7 +286,63 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7F09331101DDDCD26B61B66 /* [CP] Embed Pods Frameworks */ = {
+		589E90682062CD613A1C9538 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E451A8D41FD535BF5A60629 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B2A471AFD784E472ED70B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockTradingAssist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D65921B7F74802FAC910C0C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,7 +359,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5BD26300D753C6EA10D7F00 /* [CP] Copy Pods Resources */ = {
+		C8FE96F3452822E838FE04F1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,23 +374,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist-StockTradingAssistTests/Pods-StockTradingAssist-StockTradingAssistTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB002590E2D3F0E211249BFF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTradingAssist/Pods-StockTradingAssist-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -429,15 +428,16 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FCEAB7846091B3593F0826D /* Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig */;
+			baseConfigurationReference = 09974051AD44C83C377B0113 /* Pods-StockTradingAssist-StockTradingAssistTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = StockTradingAssistTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,12 +456,13 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26D68AF7196162EB226F1C6E /* Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig */;
+			baseConfigurationReference = 5DDDC444664A80793B32C46F /* Pods-StockTradingAssist-StockTradingAssistTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = StockTradingAssistTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,13 +481,14 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0550AF55DB9459D0159EB903 /* Pods-StockTradingAssist.debug.xcconfig */;
+			baseConfigurationReference = 3033326B0C83BDC5F31CA6DF /* Pods-StockTradingAssist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StockTradingAssist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,12 +508,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4685B9A4EEF28BCC47234F4 /* Pods-StockTradingAssist.release.xcconfig */;
+			baseConfigurationReference = FB34B84082DFC8498BFE0EC8 /* Pods-StockTradingAssist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = StockTradingAssist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,7 +564,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -577,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -626,7 +629,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -635,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -646,6 +649,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
