@@ -25,7 +25,7 @@ export default function LoginScreen({navigation}) {
     }
     let success = data => {
       console.log(data);
-      navigation.navigate('HomeStack');
+      navigation.navigate('HomePage');
     };
     let failure = data => {
       console.log('GETTING ERROR');
@@ -40,13 +40,7 @@ export default function LoginScreen({navigation}) {
   };
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.white,
-      }}>
+    <View style={styles.singUpContainer}>
       <Header>Create An Account.</Header>
       <TextInput
         label="Name"
@@ -99,5 +93,11 @@ const styles = StyleSheet.create({
   link: {
     fontWeight: 'bold',
     color: 'blue',
+  },
+  singUpContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.white,
   },
 });

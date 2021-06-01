@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import { TouchableOpacity, StyleSheet, View } from 'react-native';
+import React, {useState} from 'react';
+import {TouchableOpacity, StyleSheet, View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Text } from 'react-native-paper';
+import {Text} from 'react-native-paper';
 import Header from '../../components/basic/Header';
 import Button from '../../components/basic/Button';
 import TextInput from '../../components/basic/TextInput';
 import Validator from '../../components/basic/utils/Validator';
-import { colors } from '../../components/basic/theme';
+import {colors} from '../../components/basic/theme';
 import userServiceController from '../../controllers/userServiceController';
 
-export default function LoginScreen({ navigation }) {
-  const [phone, setPhone] = useState({ value: '', error: '' });
-  const [password, setPassword] = useState({ value: '', error: '' });
+export default function LoginScreen({navigation}) {
+  const [phone, setPhone] = useState({value: '', error: ''});
+  const [password, setPassword] = useState({value: '', error: ''});
 
   const onLoginPressed = () => {
     const phoneError = Validator.validatePhone(phone.value);
     const passwordError = Validator.validatePassword(password.value);
-    // if (!phoneError.isValid || !passwordError.isValid) {
-    //   setPhone({value: phone.value, error: phoneError.errorMessage});
-    //   setPassword({value: password.value, error: passwordError.errorMessage});
-    //   return;
-    // }
+    if (!phoneError.isValid || !passwordError.isValid) {
+      setPhone({value: phone.value, error: phoneError.errorMessage});
+      setPassword({value: password.value, error: passwordError.errorMessage});
+      return;
+    }
     let success = data => {
       let user = {};
       delete data.data.Item.passwordHash;
@@ -29,17 +29,7 @@ export default function LoginScreen({ navigation }) {
       user.data = data.data.Item;
       user = JSON.stringify(user);
       AsyncStorage.setItem('userData', user);
-      AsyncStorage.getItem('questionnaireAnswered', (err, value) => {
-        if (err) {
-          console.log('error');
-          return;
-        }
-        if (value && value === 'true') {
-          navigation.navigate('HomePage');
-        } else {
-          navigation.navigate('QuestionnairePage');
-        }
-      });
+      navigation.navigate('HomePage');
     };
     let failure = data => {
       console.log('GETTING ERROR');
@@ -48,25 +38,19 @@ export default function LoginScreen({ navigation }) {
     let requestBody = {
       phone: phone.value,
       password: password.value,
-      id: '5797ffa0-7919-4940-a5a0-55a132b18650',
+      id: 'a7ac9694-8133-4062-9cad-c5bda19ce98e',
     };
     userServiceController.loginUser(requestBody, success, failure);
   };
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.white,
-      }}>
+    <View style={styles.loginView}>
       <Header>Welcome back.</Header>
       <TextInput
         label="Phone"
         returnKeyType="next"
         value={phone.value}
-        onChangeText={text => setPhone({ value: text, error: '' })}
+        onChangeText={text => setPhone({value: text, error: ''})}
         error={!!phone.error}
         errorText={phone.error}
         autoCapitalize="none"
@@ -76,7 +60,7 @@ export default function LoginScreen({ navigation }) {
         label="Password"
         returnKeyType="done"
         value={password.value}
-        onChangeText={text => setPassword({ value: text, error: '' })}
+        onChangeText={text => setPassword({value: text, error: ''})}
         error={!!password.error}
         errorText={password.error}
         secureTextEntry
@@ -111,5 +95,11 @@ const styles = StyleSheet.create({
   link: {
     fontWeight: 'bold',
     color: 'blue',
+  },
+  loginView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.white,
   },
 });
