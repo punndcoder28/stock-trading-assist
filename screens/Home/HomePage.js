@@ -105,39 +105,43 @@ const CompanyItem = ({
         </Text>
       </View>
       <View style={styles.break} />
-      <View style={{marginVertical: 5}}>
-        <Text style={styles.name}>Fundamental Analysis </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          DCF {fundamentalAnalysis.ratios['DCF Score']}
-        </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          DE {fundamentalAnalysis.ratios['DE Score']}
-        </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          PB {fundamentalAnalysis.ratios['PB Score']}
-        </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          PE {fundamentalAnalysis.ratios['PE Score']}
-        </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          ROA {fundamentalAnalysis.ratios['ROA Score']}
-        </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          ROE {fundamentalAnalysis.ratios['ROE Score']}
-        </Text>
-      </View>
-      <View style={styles.break} />
-      <View style={{marginVertical: 5}}>
-        <Text style={styles.name}>Price quotes for the day </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          Day high: {fundamentalAnalysis.quotes.dayHigh}
-        </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          Day low {fundamentalAnalysis.quotes.dayLow}
-        </Text>
-        <Text style={[styles.name, {fontSize: 14}]}>
-          Price {fundamentalAnalysis.quotes.price}
-        </Text>
+      <View style={{flexDirection: 'row'}}>
+        <View style={{margin: 5}}>
+          <Text style={[styles.name, {fontSize: 16}]}>
+            Fundamental Analysis
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            DCF: {fundamentalAnalysis.ratios['DCF Score']}
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            DE: {fundamentalAnalysis.ratios['DE Score']}
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            PB: {fundamentalAnalysis.ratios['PB Score']}
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            PE: {fundamentalAnalysis.ratios['PE Score']}
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            ROA: {fundamentalAnalysis.ratios['ROA Score']}
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            ROE: {fundamentalAnalysis.ratios['ROE Score']}
+          </Text>
+        </View>
+        <View style={{width: 2, backgroundColor: '#2c3e50'}} />
+        <View style={{margin: 5}}>
+          <Text style={[styles.name, {fontSize: 16}]}>Price quotes </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            Day high: {fundamentalAnalysis.quotes.dayHigh}
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            Day low: {fundamentalAnalysis.quotes.dayLow}
+          </Text>
+          <Text style={[styles.name, {fontSize: 14}]}>
+            Price: {fundamentalAnalysis.quotes.price}
+          </Text>
+        </View>
       </View>
     </View>
   );
