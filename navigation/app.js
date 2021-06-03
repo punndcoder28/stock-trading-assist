@@ -3,7 +3,6 @@ import React from 'react';
 import {Platform, View} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import {colors} from '../components/basic/theme';
 
 import LoginPage from '../screens/Login/LoginPage';
 import SignUpPage from '../screens/SignUp/SignUpPage';
@@ -24,11 +23,11 @@ export default class App extends React.Component {
       defaultNavigationOptions: {
         headerStyle: {
           height: 40,
-          backgroundColor: colors.white,
-          borderBottomColor: 'transparent',
         },
         headerBackImage: () => null,
         headerBackTitle: null,
+        headerTitle: () => null,
+        headerBackTitleVisible: false,
         headerLayoutPreset: 'center',
         headerLeftContainerStyle: {
           alignItems: 'center',
@@ -44,11 +43,11 @@ export default class App extends React.Component {
     };
 
     if (Platform.OS === 'android') {
-      defaultNavigationOptions.defaultNavigationOptions.headerLeft = (
-        <View></View>
+      defaultNavigationOptions.defaultNavigationOptions.headerLeft = () => (
+        <View />
       );
-      defaultNavigationOptions.defaultNavigationOptions.headerRight = (
-        <View></View>
+      defaultNavigationOptions.defaultNavigationOptions.headerRight = () => (
+        <View />
       );
     }
 

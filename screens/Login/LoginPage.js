@@ -8,7 +8,6 @@ import TextInput from '../../components/basic/TextInput';
 import Validator from '../../components/basic/utils/Validator';
 import {colors} from '../../components/basic/theme';
 import userServiceController from '../../controllers/userServiceController';
-
 export default function LoginScreen({navigation}) {
   const [phone, setPhone] = useState({value: '', error: ''});
   const [password, setPassword] = useState({value: '', error: ''});

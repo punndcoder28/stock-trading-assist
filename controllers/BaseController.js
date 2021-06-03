@@ -30,13 +30,13 @@ class Controller {
           });
         } else {
           response
-            .json()
+            .text()
             .then(data => {
               data.status = response.status;
               failure(data);
             })
             .catch(e => {
-              failure({error: 'Incorrect response from server.'});
+              failure({error: 'Incorrect response from server.', msg: e});
             });
         }
       })
