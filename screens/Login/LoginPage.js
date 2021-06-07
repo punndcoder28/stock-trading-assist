@@ -44,6 +44,7 @@ export default function LoginScreen({navigation}) {
 
   return (
     <View style={styles.loginView}>
+      <Header>Stock Trading Assist</Header>
       <Header>Welcome back.</Header>
       <TextInput
         label="Phone"

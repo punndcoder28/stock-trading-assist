@@ -41,7 +41,7 @@ export default function LoginScreen({navigation}) {
 
   return (
     <View style={styles.singUpContainer}>
-      <Header>Create An Account.</Header>
+      <Header>Register with us</Header>
       <TextInput
         label="Name"
         returnKeyType="next"
