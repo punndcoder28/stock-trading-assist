@@ -23,7 +23,6 @@ export default function LoginScreen({navigation}) {
     let success = data => {
       let user = {};
       delete data.data.Item.passwordHash;
-      console.log(data);
       user.authToken = data.token;
       user.data = data.data.Item;
       user = JSON.stringify(user);
@@ -37,7 +36,6 @@ export default function LoginScreen({navigation}) {
     let requestBody = {
       phone: phone.value,
       password: password.value,
-      id: 'a7ac9694-8133-4062-9cad-c5bda19ce98e',
     };
     userServiceController.loginUser(requestBody, success, failure);
   };
