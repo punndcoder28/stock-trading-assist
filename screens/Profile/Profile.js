@@ -18,7 +18,8 @@ export default class Profile extends React.Component {
     this.logout = this.logout.bind(this);
   }
   componentDidMount() {
-    AsyncStorage.getItem('userData', (_, data) => {
+    AsyncStorage.getItem('userData').then(data => {
+      console.log(data);
       data = JSON.parse(data);
       this.setState({
         showSpinner: false,

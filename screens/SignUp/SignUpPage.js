@@ -4,6 +4,7 @@ import Header from '../../components/basic/Header';
 import Button from '../../components/basic/Button';
 import TextInput from '../../components/basic/TextInput';
 import Validator from '../../components/basic/utils/Validator';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {colors} from '../../components/basic/theme';
 
 import userServiceController from '../../controllers/userServiceController';
@@ -25,6 +26,11 @@ export default function LoginScreen({navigation}) {
     }
     let success = data => {
       console.log(data);
+      let user = {};
+      user.data = data.data;
+      user = JSON.stringify(user);
+      console.log(user);
+      AsyncStorage.setItem('userData', user);
       navigation.navigate('HomePage');
     };
     let failure = data => {
